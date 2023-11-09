@@ -1,0 +1,7 @@
+path: /home/ivan/university/maga/hakatons/dataset/yolo_dataset/
+train: images/train
+val: images/val
+
+ns: 3
+names: ['man_with_weapon','man_without_weapon','weapon']
+

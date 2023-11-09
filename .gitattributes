@@ -1,0 +1,4 @@
+model.pth filter=lfs diff=lfs merge=lfs -text
+best.pt filter=lfs diff=lfs merge=lfs -text
+app/gun_searcher/model.pth filter=lfs diff=lfs merge=lfs -text
+app/gun_searcher/best.pt filter=lfs diff=lfs merge=lfs -text

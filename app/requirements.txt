@@ -1,0 +1,13 @@
+
+Django==4.2.4
+requests==2.31.0
+djangorestframework==3.14.0
+django-cors-headers==4.2.0
+psycopg2==2.9.7
+pytz==2023.3
+tzdata
+python-dateutil==2.8.2
+torch==2.0.1
+torchvision==0.15.2
+
+

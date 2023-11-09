@@ -1,0 +1,39 @@
+version: "3"
+services:
+    db:
+        build: db/
+        ports:
+            - 5432:5432
+        env_file:
+            - var.env
+        volumes:
+            - ./db/docker-entrypoint-initdb.d:/docker-entrypoint-initdb.d
+            - ./postgres_data:/var/lib/postgresql/data/
+            
+    serv:
+        build: .
+        env_file:
+            - var.env        
+        tty: true 
+        ports:
+            - 8000:8000
+        depends_on:
+            - db
+        volumes:
+            - ./media:/guns_searcher/media
+            - ./gs/migrations:/guns_searcher/gs/migrations
+        command: python3 manage.py runserver 0.0.0.0:8000
+        
+volumes:
+    docker-entrypoint-initdb.d:
+    postgres_data:
+    media:
+    migrations:
+
+networks:
+  default:
+    # Use a custom driver
+    ipam:
+      driver: default
+      config:
+        - subnet: 172.18.2.0/24

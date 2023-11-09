@@ -1,0 +1,21 @@
+<!DOCTYPE HTML>
+{% load static %}
+<html>
+ <head>
+  <link rel="stylesheet" href="{% static "css/styles.css" %}" /> 
+  <meta charset="utf-8">
+  <title>Тег IFRAME</title>
+
+ </head>
+ <body>  
+
+<form enctype="multipart/form-data" method="POST">
+        {% csrf_token %}
+    <table>
+        {{ form }}
+    </table>
+    <input type="submit" value="Send" >
+</form>
+
+ </body>
+</html>

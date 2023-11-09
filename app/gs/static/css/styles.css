@@ -1,0 +1,11 @@
+div.list {
+    width:75vw; /* ширина нашего блока */
+    height:75vh; /* высота нашего блока */
+    overflow-y: auto; /* свойство для прокрут*/    
+}
+.list img{
+	width: 100%;
+    	height: 100%;
+	object-fit: contain; 
+
+}

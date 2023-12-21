@@ -1,0 +1,14 @@
+train: ../train/images
+val: ../valid/images
+test: ../test/images
+
+nc: 3
+#names: ['gun', 'person', 'person with a gun']
+names: ['man_with_weapon', 'man_without_weapon', 'weapon']
+
+roboflow:
+  workspace: aprs
+  project: armed-person-recognition
+  version: 2
+  license: CC BY 4.0
+  url: https://universe.roboflow.com/aprs/armed-person-recognition/dataset/2
